@@ -7,13 +7,13 @@ requirements = ['allure-python-commons', 'jsonschema']
 
 setup(
     name="pytest_assertions",
-    version="0.2.0",
+    version="0.2.1",
     author="Nikita Filonov",
     author_email="filonov.nikitkaa@gmail.com",
     description="Pytest Assertions",
     long_description=readme,
     long_description_content_type="text/markdown",
-    url="https://github.com/Nikita-Filonov/models_manager",
+    url="https://github.com/Nikita-Filonov/assertions",
     packages=find_packages(),
     install_requires=requirements,
 )
