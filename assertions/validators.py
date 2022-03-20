@@ -2,8 +2,8 @@ from typing import Union
 
 import allure
 from jsonschema import validate
-from utils.formatters.validators import AllureValidationTemplates
 
+from assertions.formatters.validators import AllureValidationTemplates
 from assertions.utils import prettify_json
 
 
@@ -13,7 +13,6 @@ def validate_json(json: Union[dict, list], schema: dict):
 
     You can get schema by using .to_schema method of model manager
     Example:
-    >>> from utils.assertions.validators import validate_json
     >>> some_json = {"id": 1, "name": "string"}
     >>> some_schema = {
     ...     "type": "object",

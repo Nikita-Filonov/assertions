@@ -2,10 +2,11 @@ from http import HTTPStatus
 from typing import Any, Union, Optional, List, Dict
 
 import allure
-from utils.api.constants import TYPE_NAMES
-from utils.assertions.operators import Operators
-from utils.formatters.assertions import AllureTemplates, MessageTemplate
-from utils.utils import prettify_json
+
+from assertions.constants import TYPE_NAMES
+from assertions.formatters.assertions import MessageTemplate, AllureTemplates
+from assertions.operators import Operators
+from assertions.utils import prettify_json
 
 
 def compare_keys(a, b, keys):
