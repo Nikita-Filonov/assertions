@@ -50,4 +50,5 @@ assert_attr
 assert_json
 assert_response_status
 assert_model_equal
+validate_json
 ```
