@@ -16,6 +16,18 @@ def assert_truth(left: Any, what: str, **kwargs):
     return assert_(left=left, what=what, operator=Operators.TRUTH, **kwargs)
 
 
+def assert_not_truth(left: Any, what: str, **kwargs):
+    """
+    Can be used to check if value is truth, without type checking.
+
+    Example:
+        >>> my_value = []
+        >>> assert_not_truth(my_value, 'my_value')
+
+    """
+    return assert_(left=left, what=what, operator=Operators.NOT, **kwargs)
+
+
 def assert_all(left: List[Dict], right: List[Dict], what: str, keys: List[str], **kwargs):
     """
     Can be used to check if all values from left, equals to values from right by given keys
