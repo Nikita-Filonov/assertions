@@ -1,7 +1,8 @@
 nav:
   - Home: index.md
+  - Assertion builder: builder.md
   - Assertion solutions:
-      - Common: models/models.md
+      - Common: assertions/common.md
       - API Response: models/inheritance.md
       - Models: models/json.md
   - Validators:

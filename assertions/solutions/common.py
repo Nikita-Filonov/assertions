@@ -62,3 +62,19 @@ def assert_lte(left, right, what, **kwargs):
         >>> assert_lte(left_value, right_value, 'My value count')
     """
     assert_(left=left, right=right, what=what, operator=Operators.LTE, **kwargs)
+
+
+def assert_contains(left, right, what, **kwargs):
+    """
+    Can be used to check if right containse left
+
+    Example:
+        >>> left_value = 'some'
+        >>> right_value = 'My some description'
+        >>> assert_contains(left_value, right_value, 'Checking some')
+
+        >>> left_value = 1
+        >>> right_value = [1, 2, 3, 4, 5]
+        >>> assert_contains(left_value, right_value, 'Checking some')
+    """
+    assert_(left=left, right=right, what=what, operator=Operators.CONTAINS, **kwargs)
