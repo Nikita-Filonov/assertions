@@ -1,0 +1,20 @@
+image: python:latest
+
+variables:
+  FORCE_PUBLISH: "0"
+
+stages:
+  - publish
+
+publish:
+  stage: publish
+  script:
+    - python3 setup.py sdist
+    - pip install twine
+    - twine upload --config-file "$NEXUS_PYPIRC" --repository pypi-alemira dist/*
+  rules:
+    - if: $CI_COMMIT_BRANCH =~ /^(master|main)/
+      changes:
+        - setup.py
+      when: manual
+    - if: $FORCE_PUBLISH != "0"
