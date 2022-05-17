@@ -3,10 +3,10 @@ nav:
   - Assertion builder: builder.md
   - Assertion solutions:
       - Common: assertions/common.md
-      - API Response: models/inheritance.md
-      - Models: models/json.md
+      - API Response: assertions/response.md
+      - Models: assertions/models.md
   - Validators:
-      - Json schema: schema/basic.md
+      - Json schema: validators/schema.md
 
 theme:
   name: material
@@ -15,13 +15,13 @@ theme:
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: blue
+      primary: green
       toggle:
         icon: material/weather-night
         name: Switch to dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: blue
+      primary: green
       toggle:
         icon: material/weather-sunny
         name: Switch to light mode

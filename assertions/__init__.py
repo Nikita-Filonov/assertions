@@ -1,4 +1,5 @@
 from assertions.assertions import assert_
+from assertions.operators import Operators
 from assertions.solutions.common import assert_all, assert_any, assert_lte, assert_truth, assert_not_truth, \
     assert_contains
 from assertions.solutions.models import assert_model_equal
@@ -17,5 +18,6 @@ __all__ = [
     'assert_json',
     'assert_response_status',
     'assert_model_equal',
-    'validate_json'
+    'validate_json',
+    'Operators'
 ]

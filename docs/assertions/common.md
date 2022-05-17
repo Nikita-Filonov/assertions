@@ -4,11 +4,6 @@ assert_truth
 ---
 Used to check if an object is True
 
-| name  | value      | description |
-| :---- | :--------- | :---- |
-| left  | Any object | Object which we want ensure that is `True` |
-| what  | Any string | Any human readable string, for describing what are we checking |
-
 ```python
 from assertions import assert_truth
 
@@ -20,11 +15,6 @@ assert_not_truth
 ---
 
 Used to check if an object is not True
-
-| name  | value      | description |
-| :---- | :--------- | :---- |
-| left  | Any object | Object which we want ensure that is `True` |
-| what  | Any string | Any human readable string, for describing what are we checking |
 
 ```python
 from assertions import assert_not_truth
@@ -43,13 +33,6 @@ element with another. Expected that **all** values from actual, will equal to ex
 
     It is worth noting that when checking lists, sorting may not match. That is, if two lists have different sorting 
     of elements, then the method will sort them and after that asserting will occur. This is true for `all`, `any`
-
-| name  | value      | description |
-| :---- | :--------- | :---- |
-| left  | List of dictionaries | Actual list of dictionaries we want to check |
-| right  | List of dictionaries | Expected list of dictionaries with which we want to compare |
-| keys  | List strings | List of keys to check. For example if we want to check certain list of keys |
-| what  | Any string | Any human readable string, for describing what are we checking |
 
 ```python
 from assertions import assert_all
@@ -74,13 +57,6 @@ assert_any
 
 Used to compare two lists with objects. This method will iterate through each of the lists and compare the corresponding
 element with another. Expected that **any** values from actual, will equal to expected. Same as python `any` function.
-
-| name  | value      | description |
-| :---- | :--------- | :---- |
-| left  | List of dictionaries | Actual list of dictionaries we want to check |
-| right  | List of dictionaries | Expected list of dictionaries with which we want to compare |
-| keys  | List strings | List of keys to check. For example if we want to check certain list of keys |
-| what  | Any string | Any human readable string, for describing what are we checking |
 
 This will not raise an `AssertionError`
 
@@ -124,3 +100,26 @@ assert_any(actual, expected, keys=['name'], what='List of my dictionaries')
 
 assert_lte
 ---
+Can be used to check if left is equal or lower than right
+
+```python
+from assertions import assert_lte
+
+actual_items = 5
+expected_items = 6
+
+assert_lte(actual_items, expected_items, what='Number of items')
+```
+
+assert_contains
+---
+Can be used to check if some object contains item
+
+```python
+from assertions import assert_contains
+
+items = [1, 2, 3, 4, 5]
+
+assert_contains(items, 1, 'Item')
+assert_contains(items, 10, 'Item')
+```

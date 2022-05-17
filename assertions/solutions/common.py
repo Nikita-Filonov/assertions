@@ -66,7 +66,7 @@ def assert_lte(left, right, what, **kwargs):
 
 def assert_contains(left, right, what, **kwargs):
     """
-    Can be used to check if right containse left
+    Can be used to check if right contains left
 
     Example:
         >>> left_value = 'some'
