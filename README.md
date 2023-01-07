@@ -4,4 +4,11 @@ Scope of assertions methods, which provides simple interface for creating checks
 library is to add generalization to allure steps, and to composing checks, as well as errors. When all checks look the
 same, they are better read and understood.
 
-[Read the docs](https://platform.pages.alemira.dev/qa/assertions/)
+[Read the docs](https://Nikita-Filonov.github.io/assertions/)
+
+Install library
+---
+
+```bash
+pip install pytest-assertions
+```
